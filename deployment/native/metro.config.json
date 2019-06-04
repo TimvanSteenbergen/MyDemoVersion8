@@ -1,0 +1,35 @@
+{
+  "watchFolders": [
+    "C:/Users/Tim van Steenbergen/Documents/MendixProjects/MyDemoVersion8/deployment/native",
+    "C:/Users/Tim van Steenbergen/Documents/MendixProjects/MyDemoVersion8/deployment/web/widgets",
+    "C:/Users/Tim van Steenbergen/Documents/MendixProjects/MyDemoVersion8/theme",
+    "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node"
+  ],
+  "resolver": {
+    "extraNodeModules": {
+      "externalWidgets": "C:/Users/Tim van Steenbergen/Documents/MendixProjects/MyDemoVersion8/deployment/native/externalWidgets",
+      "@babel/runtime": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/@babel/runtime",
+      "mendix": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/mendix",
+      "react": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react",
+      "react-native": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native",
+      "react-native-ble-px": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-ble-px",
+      "react-native-calendar-events": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-calendar-events",
+      "react-native-camera": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-camera",
+      "react-native-device-info": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-device-info",
+      "react-native-firebase": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-firebase",
+      "react-native-geocoder": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-geocoder",
+      "react-native-image-picker": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-image-picker",
+      "react-native-inappbrowser-reborn": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-inappbrowser-reborn",
+      "react-native-maps": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-maps",
+      "react-native-navigation": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-navigation",
+      "react-native-sound": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-sound",
+      "react-native-svg": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-svg",
+      "react-native-tab-view": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-tab-view",
+      "react-native-touch-id": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-touch-id",
+      "react-native-vector-icons": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-vector-icons",
+      "react-native-video": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-video",
+      "react-native-view-shot": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-view-shot",
+      "react-native-webview": "C:/Program Files/Mendix/8.0.0.50768/modeler/tools/node/node_modules/react-native-webview"
+    }
+  }
+}

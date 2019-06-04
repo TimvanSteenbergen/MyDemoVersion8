@@ -1,0 +1,12 @@
+Buildfile: C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment\build_core.xml
+
+compile:
+    [javac] Compiling 4 source files to C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment\run\bin
+
+package:
+      [jar] Building jar: C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment\model\bundles\project.jar
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+
+

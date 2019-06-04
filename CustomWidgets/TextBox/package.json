@@ -1,0 +1,44 @@
+{
+  "name": "textbox",
+  "widgetName": "TextBox",
+  "version": "1.0.0",
+  "description": "Putting something in the textbox",
+  "copyright": "Tieka 2019",
+  "author": "Tim van Steenbergen",
+  "config": {
+    "widgetPath": "../..//widgets",
+    "projectPath": "../..//",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "tieka",
+  "scripts": {
+    "start": "concurrently \"npm run mx-script start:server -- --open\" \"npm:dev\"",
+    "dev": "npm run mx-script start:ts",
+    "build": "npm run mx-script build:ts",
+    "lint": "npm run mx-script lint",
+    "lint:fix": "npm run mx-script lint:fix",
+    "mx-script": "cd ./node_modules/@mendix/pluggable-widgets-tools && node bin/mx-scripts.js",
+    "prerelease": "npm run lint",
+    "release": "npm run mx-script release:ts"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^0.1.0",
+    "@types/big.js": "^4.0.5",
+    "@types/classnames": "^2.2.4",
+    "@types/globalize": "0.0.34",
+    "@types/jest": "^24.0.0",
+    "@types/react": "^16.7.13",
+    "@types/react-dom": "^16.0.9",
+    "mendixmodelsdk": "4.19.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-hot-loader": "^4.3.11",
+    "react-test-renderer": "^16.6.0"
+  },
+  "dependencies": {
+    "big.js": "^5.2.2",
+    "classnames": "^2.2.6"
+  }
+}
