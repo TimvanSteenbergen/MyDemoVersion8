@@ -2,6 +2,7 @@ Buildfile: C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\
 
 deploy:
      [copy] Copying 46 files to C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment
+     [copy] Copying 1 file to C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment\model\resources
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
