@@ -1,1 +1,9 @@
+# Standard files to exclude from Mendix projects:
+.svn/*
+.mendix-cache/*
+deployment/*
+*.lock
+
+# others:
 proxies
+fc
