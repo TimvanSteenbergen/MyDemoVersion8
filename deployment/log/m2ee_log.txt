@@ -1,3 +1,7 @@
-[rtlauncher:container$] INFO Container start took 4162. Ready to accept admin requests.
+[rtlauncher:container$] INFO Evictions for component 'project-userlib':
+Evicted C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8-main\deployment\model\lib\userlib\fontbox-2.0.13.jar by C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8-main\deployment\model\lib\userlib\fontbox-2.0.14.jar.
+Evicted C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8-main\deployment\model\lib\userlib\pdfbox-2.0.13.jar by C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8-main\deployment\model\lib\userlib\pdfbox-2.0.14.jar.
+[rtlauncher:container$] INFO Container start took 3031. Ready to accept admin requests.
+
 
 

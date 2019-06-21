@@ -1,8 +1,8 @@
-Buildfile: C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment\build_core.xml
+Buildfile: C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8-main\deployment\build_core.xml
 
 deploy:
-     [copy] Copying 46 files to C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment
-     [copy] Copying 1 file to C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8\deployment\model\resources
+     [copy] Copying 46 files to C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8-main\deployment
+     [copy] Copying 31 files to C:\Users\Tim van Steenbergen\Documents\MendixProjects\MyDemoVersion8-main\deployment\model\lib\userlib
 
 BUILD SUCCESSFUL
 Total time: 0 seconds

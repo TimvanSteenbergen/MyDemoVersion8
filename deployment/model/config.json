@@ -6,9 +6,12 @@
     "DatabaseHost": "",
     "DatabaseUserName": "",
     "DatabaseUseIntegratedSecurity": "False",
-    "ApplicationRootUrl": "http://localhost:8080/",
+    "ApplicationRootUrl": "http://localhost:8081/",
     "ScheduledEventExecution": "None"
   },
-  "Constants": {},
+  "Constants": {
+    "ForumQuestions.Constant": "q",
+    "CommunityCommons.MergeMultiplePdfs_MaxAtOnce": "10"
+  },
   "AdminPassword": "1"
 }

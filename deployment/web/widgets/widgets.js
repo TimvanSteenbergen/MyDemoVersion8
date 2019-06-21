@@ -1,1 +1,1 @@
-define(["BootstrapTooltip/widget/BootstrapTooltip", "BootstrapTooltip/widget/BootstrapTooltipContext", "MobileFeatures/widget/MobileFeatures", "SprintrFeedbackWidget/SprintrFeedback"], {});
+define(["BootstrapTooltip/widget/BootstrapTooltip", "BootstrapTooltip/widget/BootstrapTooltipContext", "DataGridColumnSearch/widget/DataGridColumnSearch", "OnAnyChange/widget/OnAnyChange", "MobileFeatures/widget/MobileFeatures", "SprintrFeedbackWidget/SprintrFeedback"], {});

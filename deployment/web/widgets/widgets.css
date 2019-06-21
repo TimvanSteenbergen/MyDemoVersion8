@@ -5,6 +5,104 @@
 
 }
 
+/* based on: https://raw.githubusercontent.com/mendix/atlas-framework/master/_variables.scss */
+.widget-progress-circle {
+  width: 100%; }
+
+.widget-progress-circle .h1, .widget-progress-circle .h2, .widget-progress-circle .h3, .widget-progress-circle .h4, .widget-progress-circle .h5, .widget-progress-circle .h6 {
+  margin: 0px; }
+
+.widget-progress-circle-trail-path {
+  stroke: #eee; }
+
+.widget-progress-circle-alert .progressbar-text {
+  color: red !important;
+  /* The Progress library has inline styling on the circle text */ }
+
+.widget-progress-circle-clickable {
+  cursor: pointer; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .widget-progress-circle > div {
+    height: 0;
+    padding: 0;
+    width: 100%;
+    padding-bottom: 100%; }
+    .widget-progress-circle > div > svg {
+      top: 0;
+      left: 0;
+      height: 100%;
+      position: absolute; } }
+
+.widget-progress-circle-path {
+  stroke: #0595DB; }
+
+.widget-progress-circle-primary .widget-progress-circle-path {
+  stroke: #0595DB; }
+
+.widget-progress-circle-default .widget-progress-circle-path {
+  stroke: #DDDDDD; }
+
+.widget-progress-circle-info .widget-progress-circle-path {
+  stroke: #48B0F7; }
+
+.widget-progress-circle-success .widget-progress-circle-path {
+  stroke: #76CA02; }
+
+.widget-progress-circle-warning .widget-progress-circle-path {
+  stroke: #f99b1d; }
+
+.widget-progress-circle-danger .widget-progress-circle-path {
+  stroke: #ed1c24; }
+
+.widget-progress-circle-inverse .widget-progress-circle-path {
+  stroke: #252C36; }
+
+.mx-datagrid-head th .dataGridSearchField {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    font-weight: normal;
+    width: 95%;
+    text-align: inherit;
+    padding-left: 25px;
+}
+
+select.dataGridSearchField {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mx-datagrid-head th {
+    vertical-align: top !important;
+}
+
+.dataGridSearchContainer {
+    position: relative;
+}
+
+.dataGridSearchContainer i {
+    position: absolute;
+    top: 10px;
+    left: 2.5%;
+    margin-left: 9px;
+    color: gray;
+}
+
+.dataGridSearchContainer .mx-dateinput-select-button {
+    position: absolute;
+    background-color: transparent;
+    right: 0px;
+    outline:0;
+}
+
+.dataGridSearchContainer .mx-dateinput-select-button:hover,
+.dataGridSearchContainer .mx-dateinput-select-button:focus {
+    color: gray;
+    outline:0 !important;
+}
+
 #connection-error-bar {
     background: rgba(0,0,0,0.8);
     z-index: 10000;
@@ -48,4 +146,8 @@
     padding: 0!important;
     margin: 0!important;
     border: 0!important;
+}
+
+.widgetname {
+
 }
