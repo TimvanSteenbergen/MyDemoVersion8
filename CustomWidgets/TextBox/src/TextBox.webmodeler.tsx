@@ -19,5 +19,3 @@ export function getVisibleProperties(_valueMap: TextBoxPreviewProps, visibilityM
 export function getPreviewCss(): string {
     return require("./ui/TextBox.css");
 }
-
-

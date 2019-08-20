@@ -1,5 +1,5 @@
 {
-  "RuntimeVersion": "8.0.0.50768",
+  "RuntimeVersion": "8.0.0.56467",
   "ProjectID": "d4fc132b-f32f-428c-97d4-b68479c9826d",
   "ProjectName": "MyDemoVersion8",
   "ModelVersion": "unversioned",
@@ -30,9 +30,32 @@
       "Type": "Integer",
       "Description": "Restricted to 10 files at once for Mendix Cloud v4 compatibility. If you need to merge more than 10 files increase the number here. Setting the value to <=0 means unlimited.\r\n\r\nNote: We very strongly recommend to not increase the number for applications running in Mendix Cloud v4.",
       "DefaultValue": "10"
+    },
+    {
+      "Name": "DeepLink.IndexPage",
+      "Type": "String",
+      "Description": "The index page that a user will be redirected to when the deeplink request handler finishes. This pages should start the client system, which will trigger the user's home microflow, which will execute the pending link that the handler prepared. You can (for example) modify this to have deeplinks use a different styling from the rest of the system by loading a different index page.\r\nDefault: index.html",
+      "DefaultValue": "index.html"
+    },
+    {
+      "Name": "DeepLink.LoginLocation",
+      "Type": "String",
+      "Description": "If login is required, this constant defines where to use can enter his credentials. If empty, the default login page of the deeplink module (resources/login.html) is used. \r\n\r\nIf not empty, it is assumed that after login, the user will be redirected to the deeplink again. For this reason the provided url is appended with the original deeplink.\r\n\r\nFor example:\r\n'https://mxid.mendix.com/login?a=MyApp&f=true&cont='\r\nor\r\n'../sso/login?f=true&cont='\r\n\r\nDefault: empty",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "DeepLink.RequestHandlerName",
+      "Type": "String",
+      "Description": "E.g RequesthandlerName 'link' will result in https://yourdomain.com/link/\r\n",
+      "DefaultValue": "link"
     }
   ],
-  "ScheduledEvents": [],
+  "ScheduledEvents": [
+    {
+      "Name": "DeepLink.CleanUp",
+      "Description": "This event cleans up pending deeplinks that are older than the start of the previous day, that were never executed. This prevent stale links from piling up in your database."
+    }
+  ],
   "Configuration": {
     "SourceDatabaseType": "HSQLDB",
     "SourceDatabaseName": "default",
@@ -76,7 +99,7 @@
     },
     {
       "Name": "/p/",
-      "DefaultEnabled": false,
+      "DefaultEnabled": true,
       "MatchExactly": false
     }
   ]

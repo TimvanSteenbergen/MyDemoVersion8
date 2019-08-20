@@ -4,7 +4,8 @@
  * @author Mendix Widgets Team
  */
 import { CSSProperties } from "react";
-import { EditableValue } from "@mendix/pluggable-widgets-api/properties";
+import { pages } from "mendixmodelsdk";
+import { ActionValue, DynamicValue, EditableValue } from "@mendix/pluggable-widgets-api/properties";
 
 interface CommonProps {
     id: string;
@@ -13,14 +14,25 @@ interface CommonProps {
     tabIndex: number;
 }
 
+export type EditableEnum = "default" | "never";
+
 export interface TextBoxContainerProps extends CommonProps {
     textAttribute: EditableValue<string>;
+    editable: EditableEnum;
+    requiredMessage?: DynamicValue<string>;
+    onChangeAction?: ActionValue;
 }
 
 export interface TextBoxPreviewProps extends CommonProps {
     textAttribute: string;
+    editable: EditableEnum;
+    requiredMessage?: string;
+    onChangeAction?: pages.ClientAction;
 }
 
 export interface VisibilityMap {
     textAttribute: boolean;
+    editable: boolean;
+    requiredMessage: boolean;
+    onChangeAction: boolean;
 }

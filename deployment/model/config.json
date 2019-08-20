@@ -6,12 +6,16 @@
     "DatabaseHost": "",
     "DatabaseUserName": "",
     "DatabaseUseIntegratedSecurity": "False",
-    "ApplicationRootUrl": "http://localhost:8081/",
-    "ScheduledEventExecution": "None"
+    "ApplicationRootUrl": "http://localhost:8082/",
+    "ScheduledEventExecution": "Specified",
+    "MyScheduledEvents": "DeepLink.CleanUp"
   },
   "Constants": {
     "ForumQuestions.Constant": "q",
-    "CommunityCommons.MergeMultiplePdfs_MaxAtOnce": "10"
+    "CommunityCommons.MergeMultiplePdfs_MaxAtOnce": "10",
+    "DeepLink.RequestHandlerName": "link",
+    "DeepLink.LoginLocation": "",
+    "DeepLink.IndexPage": "index.html"
   },
-  "AdminPassword": "1"
+  "AdminPassword": null
 }

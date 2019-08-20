@@ -24,7 +24,7 @@
 
     var removeMessageCode = function(search) {
         var searchParams = search.substring(1).split("&").filter(function(param) {
-            param.split("=")[0] !== "messageCode"
+            return param.split("=")[0] !== "messageCode";
         });
 
         return searchParams.length > 0 ? "?" + searchParams.join("&") : "";
@@ -51,7 +51,7 @@
             var msg;
 
             switch (xhr.status) {
-                case 200: 
+                case 200:
                     var url = /login\.html/.test(window.location.pathname) ? "index.html" : "index3.html";
                     window.location = url + removeMessageCode(window.location.search) + window.location.hash;
                     return;
@@ -118,7 +118,7 @@
     loginForm.onsubmit = submit;
     usernameInput.onkeydown = hideMessage;
     passwordInput.onkeydown = hideMessage;
-    
+
     if (goHomeButton) {
         goHomeButton.onclick = goHome;
         goHomeButton.style.display = "none";

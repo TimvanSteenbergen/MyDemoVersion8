@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="tieka.textbox.TextBox" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/@mendix/pluggable-widgets-api/widget.xsd">
+<widget id="tieka.textbox.TextBox" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web" 
+    xmlns="http://www.mendix.com/widget/1.0/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/@mendix/pluggable-widgets-api/widget.xsd">
     <name>Text Box</name>
     <description>Putting something in the textbox</description>
     <icon/>
     <properties>
+        <propertyGroup caption="Label">
+            <systemProperty key="Label" />
+        </propertyGroup>
         <propertyGroup caption="Data source">
-            <property key="textAttribute" type="attribute">
+            <property key="textAttribute" type="attribute" onChange="onChangeAction">
                 <caption>Text attribute</caption>
                 <description/>
                 <attributeTypes>
                     <attributeType name="String"/>
                 </attributeTypes>
+            </property>
+            <property key="editable" type="enumeration" defaultValue="default">
+                <caption>Editable</caption>
+                <description/>
+                <enumerationValues>
+                    <enumerationValue key="default">Default</enumerationValue>
+                    <enumerationValue key="never">Never</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="requiredMessage" type="textTemplate" required="false">
+                <caption>Required message</caption>
+                <description/>
+                <translations>
+                    <translation lang="en_US">A input text is required</translation>
+                </translations>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="onChangeAction" type="action" required="false">
+                <caption>OnChange action</caption>
+                <description/>
             </property>
         </propertyGroup>
     </properties>
