@@ -106,6 +106,7 @@ public class UserActionsRegistrar
     registrator.registerUserAction(forumquestions.actions.endTransaction.class);
     registrator.registerUserAction(forumquestions.actions.rollbackTransaction.class);
     registrator.registerUserAction(forumquestions.actions.startTransaction.class);
+    registrator.registerUserAction(goodies.actions.GenerateHMAC_SHA1.class);
     registrator.registerUserAction(oql.actions.AddBooleanParameter.class);
     registrator.registerUserAction(oql.actions.AddDateTimeParameter.class);
     registrator.registerUserAction(oql.actions.AddDecimalParameter.class);
