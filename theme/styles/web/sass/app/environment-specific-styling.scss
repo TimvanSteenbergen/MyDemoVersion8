@@ -1,0 +1,91 @@
+/*
+Environment specific styling
+*/
+.Badge {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 40px;
+
+    /* To place the Badge at the top right of the screen
+    background: url(/img/env_sprite.png) -120px -0px;
+    top: 0;
+    right: 80px;
+    */
+ 
+    /* To place the Badge vertical at the right side of the screen*/
+    background: url(/img/env_sprite_inverted.png) -120px -40px;
+    top: 100px;
+    right: -55px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.env-header {
+    opacity: 99%;
+}
+// The DOM-element Body has to have the environment specific class '<environment>-env'. 
+// This is done by 'Snip_AddEnvironmentclassToBody' that you have to add to your page-templates
+.local-env {
+
+    // Change the text in the badge by moving the sprite in the background
+    .Badge {
+        display: inline;
+        background-position-y: -40px; //Showing 'Local'
+    }
+
+    //Adjust any styling you see fit to differentiate the UI from the other environments
+    // For instance add 'env-header' as class to your page layout's header and make the background color lightgray
+    .env-header {
+        background-color: lightgray;
+    }
+}
+
+.dev-env {
+
+    .Badge {
+        display: inline;
+        background-position-y: -79px; //Showing 'DEV'
+    }
+
+    //or lightgreen
+    .env-header {
+        background-color: lightgreen;
+    }
+}
+
+.test-env {
+    .Badge {
+        display: inline;
+        background-position-y: -118px; //Showing 'TEST'
+    }
+    .env-header {
+        background-color: lightblue;
+    }
+}
+
+.accp-env {
+    .Badge {
+        display: inline;
+        background-position-y: -157px; //Showing 'ACCP'
+    }
+    .env-header {
+        background-color: lightgreen
+        ;
+    }
+}
+
+.prod-env {
+    .Badge {
+        display: none; //Hiding the badge entirely
+    }
+}
+
+.other-env {
+    .Badge {
+        display: none; //Hiding the badge entirely
+    }
+}

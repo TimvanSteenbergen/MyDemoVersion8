@@ -1,0 +1,43 @@
+@import "custom-variables";
+@import "environment-specific-styling";
+
+.RunningSprite {
+    background: url(/resources/running.png) -42px 1px;
+    // background: url(/resources/env_sprite.png) -120px -0px;
+}
+
+.PersonIsAlive {
+    display: inline;
+}
+
+.PersonIsDead {
+    display: none;
+}
+
+//Animations
+.networth {
+    border-radius: 15px;
+}
+.nwto10 {
+    background: url(/resources/greentored.png) 0 -380px;
+}
+
+.nwto100 {
+    background: url(/resources/greentored.png) 0 -320px;
+}
+
+.nwto1000 {
+    background: url(/resources/greentored.png) 0 -230px;
+}
+
+.nwto10000 {
+    background: url(/resources/greentored.png) 0 -150px;
+}
+
+.nwto100000 {
+    background: url(/resources/greentored.png) 0 -60px;
+}
+
+.nwtoend {
+    background: url(/resources/greentored.png) 0 0px;
+}

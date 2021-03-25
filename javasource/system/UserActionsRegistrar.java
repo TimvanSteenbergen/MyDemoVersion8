@@ -27,6 +27,7 @@ public class UserActionsRegistrar
     registrator.registerUserAction(communitycommons.actions.encryptMemberIfChanged.class);
     registrator.registerUserAction(communitycommons.actions.EncryptString.class);
     registrator.registerUserAction(communitycommons.actions.EndTransaction.class);
+    registrator.registerUserAction(communitycommons.actions.EnumerationFromString.class);
     registrator.registerUserAction(communitycommons.actions.EscapeHTML.class);
     registrator.registerUserAction(communitycommons.actions.executeMicroflowAsUser.class);
     registrator.registerUserAction(communitycommons.actions.executeMicroflowAsUser_1.class);
@@ -40,6 +41,7 @@ public class UserActionsRegistrar
     registrator.registerUserAction(communitycommons.actions.executeUnverifiedMicroflowInBatches.class);
     registrator.registerUserAction(communitycommons.actions.FileDocumentFromFile.class);
     registrator.registerUserAction(communitycommons.actions.FileFromFileDocument.class);
+    registrator.registerUserAction(communitycommons.actions.GenerateHMAC_SHA256.class);
     registrator.registerUserAction(communitycommons.actions.GenerateHMAC_SHA256_hash.class);
     registrator.registerUserAction(communitycommons.actions.GetApplicationUrl.class);
     registrator.registerUserAction(communitycommons.actions.GetCFInstanceIndex.class);
@@ -75,7 +77,7 @@ public class UserActionsRegistrar
     registrator.registerUserAction(communitycommons.actions.refreshClassByObject.class);
     registrator.registerUserAction(communitycommons.actions.RegexQuote.class);
     registrator.registerUserAction(communitycommons.actions.RegexReplaceAll.class);
-    registrator.registerUserAction(communitycommons.actions.RegexTest.class);
+    registrator.registerUserAction(communitycommons.actions.RemoveEnd.class);
     registrator.registerUserAction(communitycommons.actions.retrieveURL.class);
     registrator.registerUserAction(communitycommons.actions.RunMicroflowAsyncInQueue.class);
     registrator.registerUserAction(communitycommons.actions.StartTransaction.class);
@@ -99,14 +101,12 @@ public class UserActionsRegistrar
     registrator.registerUserAction(communitycommons.actions.TimeMeasureStart.class);
     registrator.registerUserAction(communitycommons.actions.XSSSanitize.class);
     registrator.registerUserAction(communitycommons.actions.YearsBetween.class);
+    registrator.registerUserAction(countriesv5.actions.StringToCountry.class);
     registrator.registerUserAction(deeplink.actions.ExecuteDeeplink.class);
     registrator.registerUserAction(deeplink.actions.GetApplicationUrl.class);
     registrator.registerUserAction(deeplink.actions.GetCurrentSessionID.class);
     registrator.registerUserAction(deeplink.actions.ReadMicroflows.class);
     registrator.registerUserAction(deeplink.actions.StartDeeplinkJava.class);
-    registrator.registerUserAction(forumquestions.actions.endTransaction.class);
-    registrator.registerUserAction(forumquestions.actions.rollbackTransaction.class);
-    registrator.registerUserAction(forumquestions.actions.startTransaction.class);
     registrator.registerUserAction(goodies.actions.GenerateHMAC_SHA1.class);
     registrator.registerUserAction(oql.actions.AddBooleanParameter.class);
     registrator.registerUserAction(oql.actions.AddDateTimeParameter.class);
@@ -117,6 +117,14 @@ public class UserActionsRegistrar
     registrator.registerUserAction(oql.actions.CountRowsOQLStatement.class);
     registrator.registerUserAction(oql.actions.ExecuteOQLStatement.class);
     registrator.registerUserAction(oql.actions.ExportOQLToCSV.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelFilter.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelFilter_CustomOptions.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelFlatMap.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelFlatMap_CustomOptions.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelForEach.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelForEach_CustomOptions.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelMap.class);
+    registrator.registerUserAction(parallelexecute.actions.ParallelMap_CustomOptions.class);
     registrator.registerUserAction(pdfparser.actions.GetAuthor.class);
     registrator.registerUserAction(pdfparser.actions.GetContent.class);
     registrator.registerUserAction(pdfparser.actions.GetCreationDate.class);

@@ -1,0 +1,81 @@
+/*
+Environment specific styling
+*/
+.Badge {
+    background: url(/resources/env_sprite.png) -120px -0px;
+    z-index: -1;
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: 0;
+    right: 80px;
+
+    /* To place the Badge vertical at the right side of the screen
+    top: 60px;
+    right: -40px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    */
+}
+
+// The DOM-element Body has to have the environment specific class '<environment>-env'. 
+// This is done by 'Snip_AddEnvironmentclassToBody' that you have to add to your page-templates
+.local-env {
+
+    // Change the text in the badge by moving the sprite in the background
+    .Badge {
+        display: inline;
+        background-position-y: -40px; //Showing 'Local'
+    }
+
+    //Adjust any styling you see fit to differentiate the UI from the other environments
+    // For instance add 'env-header' as class to your page layout's header and make the background color lightgray
+    .env-header {
+        background-color: lightgray;
+        opacity: 99%;
+    }
+}
+
+.dev-env {
+
+    .Badge {
+        display: inline;
+        background-position-y: -79px; //Showing 'DEV'
+    }
+
+    //or lightgreen
+    .env-header {
+        background-color: lightgreen;
+        opacity: 99%;
+    }
+}
+
+.test-env {
+    .Badge {
+        display: inline;
+        background-position-y: -118px; //Showing 'TEST'
+    }
+}
+
+.accp-env {
+    .Badge {
+        display: inline;
+        background-position-y: -157px; //Showing 'ACCP'
+    }
+}
+
+.prod-env {
+    .Badge {
+        display: none; //Hiding the badge entirely
+    }
+}
+
+.other-env {
+    .Badge {
+        display: none; //Hiding the badge entirely
+    }
+}

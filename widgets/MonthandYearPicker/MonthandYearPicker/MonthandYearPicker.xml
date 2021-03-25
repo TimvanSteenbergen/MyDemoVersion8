@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="MonthandYearPicker.widget.MonthandYearPicker" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>MonthandYearPicker</name>
+    <description>The description of this widget.</description>
+
+    <icon>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEwElEQVR42pVVS0xcZRQ+5z7nBVSBAQJlSHRhigkxmLYxJKTD0xXbuuvOaE2ERtKuXFCKcUMbE8WQuOjGsNWk4T0mXaitKfGxAKouKIYpMDxmKAx35t57PP9/516gPtr+yc8589/zn+983zn3gtAGUVDATFQn4Hrf9QyU1o07N6qW08vwPOtM/Rnt2tvXHpd+usN3huMP0w8BCCzEHpzQEloSCWF1eLW6FERdn7VnwqYJIU1sA0zeuqrJh0XHBsspglW0IG8XoFAswtQHKXnXcR1q+rgpQ0hgr9gphD6Yh7cgib8BjbV9iT7A1Qf9+FpvFcRMk2KmgWwhbOryWd4q4hPLoidWQVh4OLVNn7SOyrsuuXT5h/eRmvnH9xAAXFAzCIntRtAUBXRNg73TG1D9ahSipgERw4CwrvG56jGwHcgXbTgoFGDfKsDm7wdQtlrFzBywXRdWKh+BU0kC4DsP4DwkFR3J1DUMcfKwoVPE0DHESTkxhdg3ObkAFww4CVq2Q3WhJmx+qZWTAt396y6eq2ljYIs+XxhDt8gAP/oMzkISdCBDUzmRBqZM6oGZukqmqqKmqqAqUgVyXELbcejd5kF8/eVWyOQz9OfuH/hG/E3Y2N+ki99eRCpy5H0foBUuMAAg99AQSblawwMCgxPrqgKMDYhei4i4gQ5BY+wV9hX4ZeNXaCrz/IXHPzNFoSPvByxRoifxxaVrl94jhQgVTsEqqIpCKrtsQWFfHnPuEgDnJ3QJuJ0uuuw4/MfhM7bALoELCA7A7U9vj2F7e/uHqVTqlrjIO5ii//CD3xLlOOK/+Mlkst8HuClo+/RdrkTEFHhKDJ4gYTWWTJyLxazAtu3gmbDFHPcoRKCFjirp6OgYkADz8/O3fGSL5/rw8JBM08T19XWoqakhtlhRUSHOZQ2hUAh3d3eptrY2iNm8H8XyhAvljW7AgAH6fYCAgSt1dGWVL8KgkFNk9ccZdHZ2egzm5uYCBtlsFkR1XBVubGxAPB4ntlheXg6CnWAg2HHciZjMTzEsa3QkA5DzgALAYzA7Oxs0WcjAiSgajeL+/j6wJbao3bsHh6mUJ1Eyifa5cydiDtYMNCsIjPIjibq6uo4AyNMIDw4OgC/RqVOnhM7AlthienQUKrkPAmArm8W6K1dOxGSXwxiJu8A7mLru7m4PYGZmJuhBCUBcgtJlaSUA+2IxANQNDJyIyS1HRHIIxx0ZI0gwwIAPEDAQOguJIpGIZMOW2KLKElkliUyWyGGJjsfk0yayPCck6unp8RhMT08HTc7lcsCbqqurMZPJQFVVFbHFsrKyE00+HlNZWUk7CxUYa7AhdtoOmnwc4KY/gg5/csXWdR2K/I/Etyp/k3wZfV+Mqz/STy8B0Nvb60k0NTUVSLS3twe8iSvHra0tWR1bjMVicuYFA37pkEElk9J7QAwiziCdTlM+nxcvptvX1/dOAMCVSInEC8QMiCvHEgNii8cYEPvyWySSlhjI4lZWVkQR1NDQAIODg2MTExMfSYDJyclgiv5vPStmaWkJ6uvrYWRk5Ovx8fHL3LPsPyR6ka/p0zFra2vu0NDQV1z5VWa9I3vBM3y+paXl7DPLf461vb29s7i4+A3LnPPP/gZ97gy7zDSi4QAAAABJRU5ErkJggg==</icon>
+
+    <properties>
+    <property defaultValue="textinput" key="displaytype" type="enumeration">
+      <caption>Type</caption>
+      <category>Display</category>
+      <description>Way the calendar is rendered, component: show a button, embedded: show the calender in the form, range: edit two dates.</description>
+      <enumerationValues>
+        <enumerationValue key="textinput">Text input</enumerationValue>
+        <enumerationValue key="component">Component</enumerationValue>
+        <enumerationValue key="embedded">Embedded</enumerationValue>
+        <enumerationValue key="range">Range</enumerationValue>
+      </enumerationValues>
+    </property>
+    <property defaultValue="0" key="weekstart" type="integer">
+      <caption>Week starts</caption>
+      <category>Display</category>
+      <description>Weeks starts at 0=Sunday, 1=Monday etc</description>
+    </property>
+    <property defaultValue="false" key="todaybutton" type="boolean">
+      <caption>Today button</caption>
+      <category>Display</category>
+      <description>Show a today button</description>
+    </property>
+    <property key="clearbutton" defaultValue="false" type="boolean">
+      <caption>Show clear button</caption>
+      <category>Display</category>
+      <description>Show a clear button</description>
+    </property>
+    <property key="dateattr" type="attribute">
+      <caption>Date attribute</caption>
+      <category>Data source</category>
+      <description>Connected attribute</description>
+      <attributeTypes>
+        <attributeType name="DateTime"/>
+      </attributeTypes>
+    </property>
+    <property key="dateattrto" type="attribute" required="false">
+      <caption>Date attribute (end)</caption>
+      <category>Data source</category>
+      <description>Only for type 'range': Connected attribute for date range end</description>
+      <attributeTypes>
+        <attributeType name="DateTime"/>
+      </attributeTypes>
+    </property>
+    <property key="dateattrstart" type="attribute" required="false">
+      <caption>Minimal date attribute</caption>
+      <category>Data source</category>
+      <description>Attribute containing the lowest selectable date</description>
+      <attributeTypes>
+        <attributeType name="DateTime"/>
+      </attributeTypes>
+    </property>	
+    <property key="dateattrend" type="attribute" required="false">
+      <caption>Maximal date attribute</caption>
+      <category>Data source</category>
+      <description>Attribute containing the highest selectable date</description>
+      <attributeTypes>
+        <attributeType name="DateTime"/>
+      </attributeTypes>
+    </property>	
+    <property key="editableattr" type="attribute" required="false">
+      <caption>Editable attribute</caption>
+      <category>Data source</category>
+      <description>Optional attribute that controls editability</description>
+      <attributeTypes>
+        <attributeType name="Boolean"/>
+      </attributeTypes>
+    </property>	
+    <property key="todayhighlight" defaultValue="false"  type="boolean">
+      <caption>Highlight today</caption>
+      <category>Display</category>
+      <description></description>
+    </property>
+    <property key="calendarweeks" defaultValue="false" type="boolean">
+      <caption>Show weeknumbers</caption>
+      <category>Display</category>
+      <description>Show calender weeks</description>
+    </property>	
+    <property defaultValue="false" key="autoclose" type="boolean">
+      <caption>Auto close</caption>
+      <category>General</category>
+      <description>Close the form when a date is selected</description>
+    </property>
+    <property defaultValue="12" key="defaulthours" type="integer">
+      <caption>Default time (hours)</caption>
+      <category>General</category>
+      <description>Time added to date</description>
+    </property>
+    <property key="mfToExecute" required="false" type="microflow">
+      <caption>On change</caption>
+      <category>Events</category>
+      <description>Onchange microflow</description>
+      <returnType type="Void"/>
+    </property>
+    <property defaultValue="" key="daysofweekdisabled" required="false" type="string">
+      <caption>Disabled days</caption>
+      <category>Display</category>
+      <description>Disable days (comma separated) example:0,6 (sunday and saturday)</description>
+    </property>
+    <property key="totext" required="false" type="translatableString">
+      <caption>Text between dates</caption>
+      <category>Range</category>
+      <description>Only for type 'range': text between the two dates</description>
+    </property>
+    <property key="limitstart" required="false" type="string">
+      <caption>Limit start date</caption>
+      <category>General</category>
+      <description>Limit selectable dates, format: -3d (3 days ago), -2w (2 weeks ago), -4m (4 months ago), -1y (1 year ago)</description>
+    </property>	
+    <property key="limitend" required="false" type="string">
+      <caption>Limit end date</caption>
+      <category>General</category>
+      <description>Limit selectable dates, format: +3d (3 days ahead), +2w (2 weeks), +4m (4 months), +1y (1 year)</description>
+    </property>		
+    <property defaultValue="false" key="readonly" type="boolean">
+      <caption>Read-only</caption>
+      <category>Display</category>
+      <description>Date is readonly</description>
+    </property>
+    <property defaultValue="MM yyyy" key="format" type="string">
+      <caption>Format</caption>
+      <category>Display</category>
+      <description>M, MM: Jan, January
+yy, yyyy: 12, 2012.
+      </description>
+    </property>    
+  </properties>
+</widget>
+
