@@ -14,6 +14,35 @@ import com.mendix.systemwideinterfaces.core.IContext;
 public class Microflows
 {
 	// These are the microflows for the FunctionFiddler module
+	public static java.util.Date maxDate(IContext context, functionfiddler.proxies.MinMaxTest _minMaxTest)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("MinMaxTest", _minMaxTest == null ? null : _minMaxTest.getMendixObject());
+		return (java.util.Date) Core.microflowCall("FunctionFiddler.MaxDate").withParams(params).execute(context);
+	}
+	public static java.lang.Long maxInt(IContext context, functionfiddler.proxies.MinMaxTest _minMaxTest)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("MinMaxTest", _minMaxTest == null ? null : _minMaxTest.getMendixObject());
+		return (java.lang.Long) Core.microflowCall("FunctionFiddler.MaxInt").withParams(params).execute(context);
+	}
+	public static void microflow(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("FunctionFiddler.Microflow").withParams(params).execute(context);
+	}
+	public static java.util.Date minDate(IContext context, functionfiddler.proxies.MinMaxTest _minMaxTest)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("MinMaxTest", _minMaxTest == null ? null : _minMaxTest.getMendixObject());
+		return (java.util.Date) Core.microflowCall("FunctionFiddler.MinDate").withParams(params).execute(context);
+	}
+	public static java.lang.Long minInt(IContext context, functionfiddler.proxies.MinMaxTest _minMaxTest)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("MinMaxTest", _minMaxTest == null ? null : _minMaxTest.getMendixObject());
+		return (java.lang.Long) Core.microflowCall("FunctionFiddler.MinInt").withParams(params).execute(context);
+	}
 	public static void sUB_addDays(IContext context, java.lang.Long _numberOfDays, java.util.Date _dateTime)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();

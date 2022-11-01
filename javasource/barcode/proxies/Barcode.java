@@ -73,8 +73,8 @@ public class Barcode extends system.proxies.Image
 	 */
 	public static barcode.proxies.Barcode initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
-		if (com.mendix.core.Core.isSubClassOf("AppstoreAppDemos.MyBarcode", mendixObject.getType()))
-			return appstoreappdemos.proxies.MyBarcode.initialize(context, mendixObject);
+		if (com.mendix.core.Core.isSubClassOf("BarcodePlayground.MyBarcode", mendixObject.getType()))
+			return barcodeplayground.proxies.MyBarcode.initialize(context, mendixObject);
 
 		return new barcode.proxies.Barcode(context, mendixObject);
 	}

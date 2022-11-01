@@ -102,12 +102,23 @@ public class UserActionsRegistrar
     registrator.registerUserAction(communitycommons.actions.XSSSanitize.class);
     registrator.registerUserAction(communitycommons.actions.YearsBetween.class);
     registrator.registerUserAction(countriesv5.actions.StringToCountry.class);
+    registrator.registerUserAction(csv.actions.CountLines.class);
+    registrator.registerUserAction(csv.actions.ExportCSV.class);
+    registrator.registerUserAction(csv.actions.ExportOQLToCSV.class);
+    registrator.registerUserAction(csv.actions.ExportSQLToCSV.class);
+    registrator.registerUserAction(csv.actions.ImportCSV.class);
+    registrator.registerUserAction(csv.actions.ImportCSVUsingSQL.class);
+    registrator.registerUserAction(csv.actions.ReadNextLine.class);
+    registrator.registerUserAction(csv.actions.WriteNextLine.class);
     registrator.registerUserAction(deeplink.actions.ExecuteDeeplink.class);
     registrator.registerUserAction(deeplink.actions.GetApplicationUrl.class);
     registrator.registerUserAction(deeplink.actions.GetCurrentSessionID.class);
     registrator.registerUserAction(deeplink.actions.ReadMicroflows.class);
     registrator.registerUserAction(deeplink.actions.StartDeeplinkJava.class);
     registrator.registerUserAction(goodies.actions.GenerateHMAC_SHA1.class);
+    registrator.registerUserAction(icalendarmodule.actions.Appointment_SendNotification.class);
+    registrator.registerUserAction(icalendarmodule.actions.GetHostTimeZone.class);
+    registrator.registerUserAction(icalendarmodule.actions.RandomHash.class);
     registrator.registerUserAction(oql.actions.AddBooleanParameter.class);
     registrator.registerUserAction(oql.actions.AddDateTimeParameter.class);
     registrator.registerUserAction(oql.actions.AddDecimalParameter.class);
@@ -139,6 +150,7 @@ public class UserActionsRegistrar
     registrator.registerUserAction(pdfparser.actions.SetModificationDate.class);
     registrator.registerUserAction(pdfparser.actions.SetSubject.class);
     registrator.registerUserAction(pdfparser.actions.SetTitle.class);
+    registrator.registerUserAction(scheduling.actions.GetObjectGuid.class);
     registrator.registerUserAction(system.actions.VerifyPassword.class);
   }
 }

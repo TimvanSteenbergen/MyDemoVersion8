@@ -14,10 +14,29 @@
     display: none;
 }
 
+// Changes to Datagrids
+.mx-datagrid table {
+    thead th,
+    tbody tr td {
+        padding: 2px;
+        margin: 1px;
+        line-height: 1.200000;
+        vertical-align: bottom;
+        border: 1px solid #ddd;
+    }
+}
+
+// On the Tabs, placing the badge on the left
+.mx-tabcontainer-badge {
+    float: left;
+    margin-right: 10px;
+}
+
 //Animations
 .networth {
     border-radius: 15px;
 }
+
 .nwto10 {
     background: url(/resources/greentored.png) 0 -380px;
 }

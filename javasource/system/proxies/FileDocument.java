@@ -75,6 +75,9 @@ public class FileDocument
 		if (com.mendix.core.Core.isSubClassOf("OQL.CSVDownload", mendixObject.getType()))
 			return oql.proxies.CSVDownload.initialize(context, mendixObject);
 
+		if (com.mendix.core.Core.isSubClassOf("CSV.CsvFile", mendixObject.getType()))
+			return csv.proxies.CsvFile.initialize(context, mendixObject);
+
 		if (com.mendix.core.Core.isSubClassOf("DragAndDropTrial.FileDoc", mendixObject.getType()))
 			return draganddroptrial.proxies.FileDoc.initialize(context, mendixObject);
 

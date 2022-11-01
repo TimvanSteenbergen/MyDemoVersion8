@@ -50,4 +50,9 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("OQL.IVK_PerformTests").withParams(params).execute(context);
 	}
+	public static void iVK_TestCount(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("OQL.IVK_TestCount").withParams(params).execute(context);
+	}
 }

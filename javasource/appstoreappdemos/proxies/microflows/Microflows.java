@@ -15,10 +15,19 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class Microflows
 {
 	// These are the microflows for the AppstoreAppDemos module
-	public static void aCT_MyThing_GeneratePDF(IContext context)
+	public static void act_ExchangeRate_CreateJsonForSampleData(IContext context, java.util.List<appstoreappdemos.proxies.ExchangeRate> _exchangeRateList)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
-		Core.microflowCall("AppstoreAppDemos.ACT_MyThing_GeneratePDF").withParams(params).execute(context);
+		java.util.ArrayList<IMendixObject> listparam_exchangeRateList = null;
+		if (_exchangeRateList != null)
+		{
+			listparam_exchangeRateList = new java.util.ArrayList<>();
+			for (appstoreappdemos.proxies.ExchangeRate obj : _exchangeRateList)
+				listparam_exchangeRateList.add(obj.getMendixObject());
+		}
+		params.put("ExchangeRateList", listparam_exchangeRateList);
+
+		Core.microflowCall("AppstoreAppDemos.Act_ExchangeRate_CreateJsonForSampleData").withParams(params).execute(context);
 	}
 	public static boolean bCo_DateTimeRange_CopyFromDateToUntilDate(IContext context, appstoreappdemos.proxies.DateTimeRange _dateTimeRange)
 	{
@@ -26,11 +35,17 @@ public class Microflows
 		params.put("DateTimeRange", _dateTimeRange == null ? null : _dateTimeRange.getMendixObject());
 		return (java.lang.Boolean) Core.microflowCall("AppstoreAppDemos.BCo_DateTimeRange_CopyFromDateToUntilDate").withParams(params).execute(context);
 	}
-	public static appstoreappdemos.proxies.MyBarcode dS_BarcodeTypeCode39(IContext context)
+	public static java.lang.Long dateToNumOfDaysAgo(IContext context, java.util.Date _date)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
-		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.DS_BarcodeTypeCode39").withParams(params).execute(context);
-		return result == null ? null : appstoreappdemos.proxies.MyBarcode.initialize(context, result);
+		params.put("Date", _date);
+		return (java.lang.Long) Core.microflowCall("AppstoreAppDemos.DateToNumOfDaysAgo").withParams(params).execute(context);
+	}
+	public static java.lang.Long decimalToInteger(IContext context, java.math.BigDecimal _rate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Rate", _rate);
+		return (java.lang.Long) Core.microflowCall("AppstoreAppDemos.DecimalToInteger").withParams(params).execute(context);
 	}
 	public static appstoreappdemos.proxies.CompletenessPercentage dS_CompletenessPercentage_GetFromAddress(IContext context, domdal.proxies.Address _address)
 	{
@@ -39,29 +54,28 @@ public class Microflows
 		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.DS_CompletenessPercentage_GetFromAddress").withParams(params).execute(context);
 		return result == null ? null : appstoreappdemos.proxies.CompletenessPercentage.initialize(context, result);
 	}
-	public static appstoreappdemos.proxies.DateRange dS_DateRange(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.DS_DateRange").withParams(params).execute(context);
-		return result == null ? null : appstoreappdemos.proxies.DateRange.initialize(context, result);
-	}
 	public static appstoreappdemos.proxies.DateTimeRange dS_DateTimerange_GetOrCreate(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.DS_DateTimerange_GetOrCreate").withParams(params).execute(context);
 		return result == null ? null : appstoreappdemos.proxies.DateTimeRange.initialize(context, result);
 	}
-	public static appstoreappdemos.proxies.MyThing dS_MyThing_Create(IContext context)
+	public static anychart.proxies.AnyChart dS_ExchangeRate_CreateJsonForAnyChart_TypeLineChart(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
-		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.DS_MyThing_Create").withParams(params).execute(context);
-		return result == null ? null : appstoreappdemos.proxies.MyThing.initialize(context, result);
+		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.DS_ExchangeRate_CreateJsonForAnyChart_TypeLineChart").withParams(params).execute(context);
+		return result == null ? null : anychart.proxies.AnyChart.initialize(context, result);
 	}
 	public static appstoreappdemos.proxies.Webcam dS_Video_GetAYoutube(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.DS_Video_GetAYoutube").withParams(params).execute(context);
 		return result == null ? null : appstoreappdemos.proxies.Webcam.initialize(context, result);
+	}
+	public static void exchangeRate_FillWithSampleData(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("AppstoreAppDemos.ExchangeRate_FillWithSampleData").withParams(params).execute(context);
 	}
 	public static void label_AfterCreateByLabelSelectorWidget(IContext context, appstoreappdemos.proxies.Webcam _webcam)
 	{
@@ -74,18 +88,6 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("Webcam", _webcam == null ? null : _webcam.getMendixObject());
 		Core.microflowCall("AppstoreAppDemos.Label_OnChangeByLabelSelectorWidget").withParams(params).execute(context);
-	}
-	public static void lineChart_GetData(IContext context, appstoreappdemos.proxies.DateRange _dateRange)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("DateRange", _dateRange == null ? null : _dateRange.getMendixObject());
-		Core.microflowCall("AppstoreAppDemos.LineChart_GetData").withParams(params).execute(context);
-	}
-	public static charts.proxies.ChartNP lineChart_GetData_2(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.LineChart_GetData_2").withParams(params).execute(context);
-		return result == null ? null : charts.proxies.ChartNP.initialize(context, result);
 	}
 	public static void oCh_DateTimeRange_Save(IContext context, appstoreappdemos.proxies.DateTimeRange _dateTimeRange)
 	{
@@ -133,19 +135,6 @@ public class Microflows
 		params.put("Person", _person == null ? null : _person.getMendixObject());
 		Core.microflowCall("AppstoreAppDemos.Person_NetWorth_Show").withParams(params).execute(context);
 	}
-	public static appstoreappdemos.proxies.MyBarcode sUB_Barcode_GetOrCreate(IContext context, appstoreappdemos.proxies.MyThing _myThing)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("MyThing", _myThing == null ? null : _myThing.getMendixObject());
-		IMendixObject result = (IMendixObject)Core.microflowCall("AppstoreAppDemos.SUB_Barcode_GetOrCreate").withParams(params).execute(context);
-		return result == null ? null : appstoreappdemos.proxies.MyBarcode.initialize(context, result);
-	}
-	public static void sUB_Barcode_RegenerateBarcode(IContext context, appstoreappdemos.proxies.MyThing _myThing)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("MyThing", _myThing == null ? null : _myThing.getMendixObject());
-		Core.microflowCall("AppstoreAppDemos.SUB_Barcode_RegenerateBarcode").withParams(params).execute(context);
-	}
 	public static java.util.Date sUB_DateTimeRange_GetTodaysDate(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -167,16 +156,16 @@ public class Microflows
 		params.put("Webcam", _webcam == null ? null : _webcam.getMendixObject());
 		return (java.lang.Boolean) Core.microflowCall("AppstoreAppDemos.SUB_Webcam_AddBase64DecodeToFile").withParams(params).execute(context);
 	}
-	public static java.util.List<appstoreappdemos.proxies.MyThing> tempDS_GetSome(IContext context)
+	public static java.util.List<barcodeplayground.proxies.MyThing> tempDS_GetSome(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		java.util.List<IMendixObject> objs = Core.microflowCall("AppstoreAppDemos.tempDS_GetSome").withParams(params).execute(context);
-		java.util.List<appstoreappdemos.proxies.MyThing> result = null;
+		java.util.List<barcodeplayground.proxies.MyThing> result = null;
 		if (objs != null)
 		{
 			result = new java.util.ArrayList<>();
 			for (IMendixObject obj : objs)
-				result.add(appstoreappdemos.proxies.MyThing.initialize(context, obj));
+				result.add(barcodeplayground.proxies.MyThing.initialize(context, obj));
 		}
 		return result;
 	}
@@ -184,5 +173,10 @@ public class Microflows
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("AppstoreAppDemos.test_BCo_DateTimeRange_CopyFromDateToUntilDate").withParams(params).execute(context);
+	}
+	public static void testFormatDateTimeUTC(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("AppstoreAppDemos.testFormatDateTimeUTC").withParams(params).execute(context);
 	}
 }
